@@ -23,10 +23,11 @@ palabraSinAdivinar.pop(-1)
 #Vidas de jugador
 vidas = 10
 
+#Despliega la palabra a adivinar
+print(palabraSinAdivinar)
+
 #Ciclo de juego
 while(vidas > 0):
-
-    print(palabraSinAdivinar)
 
     letra = input(nombre + ", elige una letra\n")
     
@@ -42,6 +43,9 @@ while(vidas > 0):
     #Une las letras de la palabra sin adivinar en un String para comparar
     guess = ''.join([str(elem) for elem in palabraSinAdivinar]) 
     
+    #Despliega la palabra a adivinar
+    print(palabraSinAdivinar)
+
     #Compara guess con la palabra que se debe adivinar, para determinar si se gano el juego o no
     if(guess == palabra.strip()):
          print("Ganaste! La palabra era:", palabra)
